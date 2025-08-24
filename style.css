@@ -152,6 +152,11 @@ a {
     margin-bottom: 50px;
 }
 
+.section-title{
+    font-size: 4.5em;
+    color: rgb(255, 145, 0);
+}
+
 #projects .all-projects {
     display: flex;
     align-items: center;
@@ -253,4 +258,5 @@ a {
     #projects .project-img {
         height: 200px;
     }
+
 }
