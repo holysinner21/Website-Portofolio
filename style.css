@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#one {
+    background-image: url(icon/b93a5e3166d5749db5e068751c200214.jpg);
+    background-size: cover;
+    background-position: left center;
+}
+
+#one h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#one h1:nth-child(1) {
+    animation-delay: 1.5s;
+}
+
+#one h1:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+#one h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+
+#one h1:nth-child(1) span {
+    animation-delay: 1s;
+}
+
+#one h1:nth-child(2) span {
+    animation-delay: 2s;
+}
+
+#profile-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 -5px 5px 0px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+    gap: 40px;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-text h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-text p {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.profile-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.contact-me{
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+    max-width: 1000px;
+    width: 100%;
+    background-color: rgb(255, 212, 38);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 -5px 5px 0px rgba(0, 0, 0, 0.1);
+    padding: 9px;
+}
+.contact-me img{
+    width: 50px;
+    border-radius: 10px;
+} 
+
+#projects .projects {
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+    
+#projects .projects-header h1 {
+    margin-bottom: 50px;
+}
+
+#projects .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+#projects .project-items {
+    display: flex;
+    flex-direction: row;
+    width: 800px; 
+    height: 350px; 
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 10px;
+    align-items: stretch;
+    background-color: #f0f0f0;
+}
+
+#projects .project-info {
+    flex: 1;
+    padding: 30px;
+    background-image: linear-gradient(60deg, black 0%, white 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 350px;
+}
+
+#projects .project-info h1 {
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+#projects .project-info p {
+    color: rgba(0, 0, 0, 0.863);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#projects .project-img {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+#projects .project-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#projects .project-img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+@media (max-width: 768px) {
+    #projects .project-items {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    #projects .project-img {
+        height: 200px;
+    }
+}
